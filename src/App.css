@@ -6,6 +6,7 @@
 
 body {
   font-family: sans-serif;
+  margin-left: 1rem;
 }
 
 a {
@@ -26,7 +27,7 @@ textarea {
 
 .folder {
   margin-top: 6px;
-  background-color: rgb(233, 233, 233);
+  background-color: #c0c0c0;
   display: flex;
   justify-content: space-between;
   padding: 3px;
@@ -41,7 +42,40 @@ textarea {
 
 .file {
   margin-top: 5px;
-  padding-left: 1rem;
+  /* padding-left: 1rem; */
   display: flex;
   flex-direction: column;
+}
+
+.buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn {
+  outline: none;
+  border: none;
+  background-color: rgb(233, 233, 233);
+  padding: 2px 10px;
+  cursor: pointer;
+}
+
+.inputContainer {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.inputContainer > span {
+  margin-top: 5px;
+}
+
+.inputContainer__input {
+  margin: 6px 0 0 0;
+  padding: 5px;
+  display: flex;
+  border: 1px solid lightgray;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
 }
