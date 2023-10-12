@@ -7,9 +7,16 @@ const useTraverseTree = () => {
         isFolder,
         items: [],
       });
+      return tree;
     }
 
-    return tree;
+    // DFS Algorithm
+    let latestNode = [];
+    latestNode = tree.items.map((ob) => {
+      return insertNode(ob, folderId, item, isFolder);
+    });
+
+    return {...tree, items: latestNode}
   }
 
   return { insertNode };

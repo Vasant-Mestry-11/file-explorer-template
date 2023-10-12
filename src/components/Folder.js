@@ -66,7 +66,13 @@ export const Folder = ({ explorer, handleInsertNode }) => {
             </div>
           )}
           {items.map((exp) => {
-            return <Folder key={exp.id} explorer={exp} />;
+            return (
+              <Folder
+                key={exp.id}
+                explorer={exp}
+                handleInsertNode={handleInsertNode}
+              />
+            );
           })}
         </div>
       </div>

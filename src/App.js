@@ -7,7 +7,7 @@ import useTraverseTree from "./hooks/useTraverseTree";
 function App() {
   const [explorer, setExplorer] = useState(FOLDER_DATA);
 
-  const { insertNode } = useTraverseTree(explorer);
+  const { insertNode } = useTraverseTree();
 
   const handleInsertNode = (folderId, item, isFolder) => {
     const finalTree = insertNode(explorer, folderId, item, isFolder);
