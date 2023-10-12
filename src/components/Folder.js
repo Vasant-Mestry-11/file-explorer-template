@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export const Folder = ({ explorer }) => {
+export const Folder = ({ explorer, handleInsertNode }) => {
   const [expanded, setExpanded] = useState(false);
   const [showInput, setShowInput] = useState({
     isVisible: false,
@@ -16,6 +16,15 @@ export const Folder = ({ explorer }) => {
       isVisible: true,
       isFolder,
     });
+  };
+
+  const addAddFolder = (e) => {
+    if (e.keyCode === 13 && e.target.value) {
+      // add logic
+      handleInsertNode(explorer.id, e.target.value, showInput.isFolder);
+
+      setShowInput((prevState) => ({ ...prevState, isVisible: false }));
+    }
   };
 
   if (isFolder) {
@@ -52,11 +61,12 @@ export const Folder = ({ explorer }) => {
                     isVisible: false,
                   }));
                 }}
+                onKeyDown={addAddFolder}
               />
             </div>
           )}
           {items.map((exp) => {
-            return <Folder explorer={exp} />;
+            return <Folder key={exp.id} explorer={exp} />;
           })}
         </div>
       </div>
