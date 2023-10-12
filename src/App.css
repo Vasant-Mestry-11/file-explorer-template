@@ -24,26 +24,24 @@ textarea {
   font: inherit;
 }
 
-.folder__container {
-  margin-left: 1rem;
-  width: 300px;
-  margin-left: 1.5rem;
-}
-
-.wrapper {
+.folder {
+  margin-top: 6px;
+  background-color: rgb(233, 233, 233);
   display: flex;
   justify-content: space-between;
-  padding: 5px;
-  margin-top: 0.5rem;
+  padding: 3px;
+  width: 300px;
+  cursor: pointer;
+  border-radius: 2px;
 }
 
-.buttons {
+.folder > span {
+  margin: 0 5px 2px 0;
+}
+
+.file {
+  margin-top: 5px;
+  padding-left: 1rem;
   display: flex;
-  gap: 1rem;
-}
-
-.buttons button {
-  font-size: 1rem;
-  padding: 2px 20px;
-  font-size: 12px;
+  flex-direction: column;
 }
